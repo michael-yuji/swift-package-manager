@@ -1468,7 +1468,7 @@ struct TestCommandTests {
                 #expect(stderr.contains("warning: '--enable-test-discovery' option is deprecated") == expected)
             }
         } when: {
-            buildSystem == .swiftbuild && [.linux, .windows].contains(ProcessInfo.hostOperatingSystem)
+            buildSystem == .swiftbuild && [.linux, .windows, .freebsd].contains(ProcessInfo.hostOperatingSystem)
         }
     }
 
